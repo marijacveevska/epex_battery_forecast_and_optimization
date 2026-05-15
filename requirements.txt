@@ -1,0 +1,16 @@
+pandas
+numpy
+lightgbm
+scikit-learn
+pulp
+cvxpy
+entsoe-py
+python-dotenv
+plotly
+matplotlib
+pyarrow
+openpyxl
+workalendar
+jupyter
+streamlit
+requests
