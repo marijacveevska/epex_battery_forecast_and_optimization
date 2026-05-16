@@ -9,7 +9,7 @@ Part 2 takes the same pipeline and makes it live: data is fetched automatically,
 ## Project structure
 ### Part 1 — Batch pipeline
 
-Data collection: ENTSO-E Transparency Platform exports (day-ahead prices, load forecast and actual, generation mix by fuel type) and Open-Meteo historical weather (wind speed, solar irradiance, temperature) for the Netherlands, 2022–2024. \\
+Data collection: ENTSO-E Transparency Platform exports (day-ahead prices, load forecast and actual, generation mix by fuel type) and Open-Meteo historical weather (wind speed, solar irradiance, temperature) for the Netherlands, 2021–2025. \\
 
 Feature engineering: hourly price lags (1h, 24h, 48h, 168h), rolling means and standard deviations, residual load (total load minus wind minus solar), cyclical time encodings (hour, weekday, month as sine/cosine pairs), Dutch public holiday flags, and cross-border flow features (NL-DE, NL-BE).\\
 
