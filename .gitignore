@@ -1,0 +1,22 @@
+.env
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Mac system files
+.DS_Store
+
+/CLAUDE.md
+
+# Data
+nl_actual_load.csv
+nl_load_forecast.csv
+nl_generation_mix.csv
+Data/raw/manual/day_ahead_prices
+Data/raw/manual/meteo
+
+# VS Code settings
+.vscode/
