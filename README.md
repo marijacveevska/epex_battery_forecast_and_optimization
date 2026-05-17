@@ -58,6 +58,7 @@ Key metrics reported: total revenue in EUR, number of full cycles completed, ave
 
 ## Project structure
 
+```
 epex_battery_forecast_and_optimization/
 ├── Data/
 │   ├── raw/
@@ -85,6 +86,7 @@ epex_battery_forecast_and_optimization/
 ├── README.md
 ├── requirements.txt
 └── .gitignore
+```
 
 ---
 
