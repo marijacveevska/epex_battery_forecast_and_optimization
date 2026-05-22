@@ -128,6 +128,23 @@ def load_generation_mix() -> pd.DataFrame:
     return agg
 
 
+def load_consumption() -> pd.Series:
+    path = RAW / "manual" / "building_consumption_2025.csv"
+    print(f"[consumption] Loading {path.name}")
+
+    df = pd.read_csv(path, header=None, names=["timestamp", "consumption_kwh"])
+    df["timestamp"] = pd.to_datetime(df["timestamp"], format="%m/%d/%y %H:%M")
+    df["timestamp"] = df["timestamp"].dt.tz_localize("UTC")
+    df = df.set_index("timestamp")
+
+    s = df["consumption_kwh"].resample("1h").sum()
+    s.name = "consumption_kwh"
+
+    print(f"[consumption] {len(s):,} rows | {s.index.min()} → {s.index.max()}")
+    print(f"[consumption] Min: {s.min():.1f} kWh | Max: {s.max():.1f} kWh | Mean: {s.mean():.1f} kWh")
+    return s
+
+
 def merge_all() -> pd.DataFrame:
     sep = "=" * 60
     print(sep)
