@@ -15,8 +15,7 @@ __pycache__/
 nl_actual_load.csv
 nl_load_forecast.csv
 nl_generation_mix.csv
-Data/raw/manual/day_ahead_prices
-Data/raw/manual/meteo
+Data/raw/manual/
 
 # VS Code settings
 .vscode/
